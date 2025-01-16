@@ -1,12 +1,13 @@
-{ config, pkgs, inputs, ... }:
-
-{
+{ config, pkgs, inputs, ... }: /*let
+  modulesRoot = ./../../modules/nixOS;
+in*/ {
   # =============================================
   # Basic System Configuration
   # =============================================
 
   imports = [
     ./hardware-configuration.nix
+    ./../../modules/nixOS/default.nix
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
   ];
   

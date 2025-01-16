@@ -70,6 +70,7 @@
     openjdk
     inputs.ghostty.packages.x86_64-linux.default
     fastfetch
+    gh
   ];
 
   # Install apps

@@ -7,29 +7,11 @@ in {
 
   imports = [
     ./hardware-configuration.nix
-    "${modulesRoot}/default.nix"
+    "${modulesRoot}"
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
   ];
-  
-  
-  boot = {
-    loader = {
-      systemd-boot.enable = false; # Disable systemd-boot
-      grub = { # Enable GRUB
-        enable = true;
-        device = "nodev";
-        useOSProber = true;
-        efiSupport = true;
-      };
-      efi.canTouchEfiVariables = true;
-      efi.efiSysMountPoint = "/boot";
-    };
-    initrd.enable = true;
-    initrd.systemd.enable = true;
-    initrd.luks.devices."luks-ef9df4c6-1d01-40e9-a50f-37188dfe9655".device = "/dev/disk/by-uuid/ef9df4c6-1d01-40e9-a50f-37188dfe9655"; # Encrypted disk..
-    kernelParams = [ "quiet" ]; # "Silent" booting
-    plymouth.enable = true; # Enable Plymouth
-  };
+  boot.initrd.luks.devices."luks-ef9df4c6-1d01-40e9-a50f-37188dfe9655".device = "/dev/disk/by-uuid/ef9df4c6-1d01-40e9-a50f-37188dfe9655"; # Encrypted disk..
+  boot.plymouth.enable = true; # Enable Plymouth
 
   networking.hostName = "wing"; # Set hostname
   networking.networkmanager.enable = true; # Enable networking

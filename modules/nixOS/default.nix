@@ -1,6 +1,6 @@
-{  pkgs, ... }:
-{
+{  pkgs, ... }: {
   imports = [
-      #module imports go here
+    ./core/bootloader
+
   ];
 }

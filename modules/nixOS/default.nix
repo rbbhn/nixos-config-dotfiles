@@ -1,5 +1,8 @@
 {  pkgs, ... }: {
   imports = [
-    ./core
+    ./boot
+    ./internationalization.nix
+    ./networking.nix
+    ./user.nix
   ];
 }

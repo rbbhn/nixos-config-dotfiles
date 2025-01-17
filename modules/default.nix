@@ -1,4 +1,4 @@
-{  pkgs, ... }: {
+{ username, ... }: {
   imports = [
     ./audio.nix
     ./bluetooth.nix
@@ -14,6 +14,6 @@
     ./printing.nix
     ./shell.nix
     ./ssh.nix
-    ./users.nix
+    "./users/${username}.nix"
   ];
 }

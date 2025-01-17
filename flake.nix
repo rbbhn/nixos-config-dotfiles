@@ -31,19 +31,23 @@
             stateVersion
             username
             hostname
-            system
-          ;
+            system;
         };
         modules = [
           ./hosts/wing/configuration.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              hostname = "${hostname}";
-            };
             home-manager.users.${username} = import ./modules/home/${username}.nix;
+            home-manager.extraSpecialArgs = {
+              inherit
+                inputs
+                self
+                stateVersion
+                username
+                system;
+              hostname = "${laptop}";
+            };
           }
         ];
       };

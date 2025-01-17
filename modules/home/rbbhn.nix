@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ... }: {
+{ pkgs, inputs, username, stateVersion, ... }: {
   #imports = [
   #    inputs.nvf.homeManagerModules.default
   #    inputs.niri.homeModules.niri
@@ -20,4 +20,5 @@
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
+  home.stateVersion = "${stateVersion}";
 }

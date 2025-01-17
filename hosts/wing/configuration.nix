@@ -27,8 +27,6 @@
 
   # Install packages
   environment.systemPackages = with pkgs; [
-    plymouth
-    catppuccin-plymouth
     kdePackages.kate
     (discord.override { withVencord = true; withOpenASAR = true; })
     prismlauncher

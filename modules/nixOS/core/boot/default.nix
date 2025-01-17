@@ -1,7 +1,7 @@
 {  pkgs, ... }: {
   imports = [
     ./efi.nix
-    ./grub.nix
+    ./loader.nix
     ./initrd.nix
     ./kernelParameters.nix
     ./plymouth.nix

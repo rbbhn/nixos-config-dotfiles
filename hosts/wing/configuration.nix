@@ -1,41 +1,23 @@
-{ config, pkgs, inputs, ... }: let
-  modulesRoot = ./../../modules/nixOS;
-in {
-  # =============================================
-  # Basic System Configuration
-  # =============================================
-
+{ config, pkgs, inputs, ... }: {
   imports = [
     ./hardware-configuration.nix
-    "${modulesRoot}"
+    ./../../modules/nixOS
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
   ];
 
-  # Mount LUKS devices - hardware specific
-  boot.initrd.luks.devices."luks-ef9df4c6-1d01-40e9-a50f-37188dfe9655".device = "/dev/disk/by-uuid/ef9df4c6-1d01-40e9-a50f-37188dfe9655"; # Encrypted disk..
-
-
-
-
-
-
-
   networking.hostName = "wing"; # Set hostname
-  networking.networkmanager.enable = true; # Enable networking
-  time.timeZone = "America/Chicago"; # Set timezone
-  i18n.defaultLocale = "en_US.UTF-8"; # Set locale
-
-  # Framework 13 specific hardware fixes
-  hardware.framework.amd-7040.preventWakeOnAC = true;
+  # Mount LUKS devices - hardware specific
+  boot.initrd.luks.devices."luks-ef9df4c6-1d01-40e9-a50f-37188dfe9655".device = "/dev/disk/by-uuid/ef9df4c6-1d01-40e9-a50f-37188dfe9655";
+  hardware.framework.amd-7040.preventWakeOnAC = true; # Framework 13 wake fix
   #boot.extraModprobeConfig = "options snd-hda-intel model=dell-headset-multi"; # This was supposed to fix the issues with mic input thru the 3.5mm jack... It did not.
 
-  # Define my user account
-  users.users.rbbhn = {
-    isNormalUser = true;
-    description = "Matthew M";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
-  };
+
+
+
+
+
+
+
 
 
 

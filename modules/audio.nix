@@ -1,4 +1,4 @@
-{  pkgs, ... }: {
+{ ... }: {
   hardware.pulseaudio.enable = false; # Disable pulseaudio
   services.pipewire = { # Enable audio with pipewire
     enable = true;

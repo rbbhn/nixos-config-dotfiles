@@ -1,4 +1,4 @@
-{  pkgs, ... }: {
+{ pkgs, ... }: {
   # Include dynamically linked executables (for running "impure" programs with minimal hassle)
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [

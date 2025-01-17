@@ -6,8 +6,8 @@
   ];
 
   networking.hostName = "wing"; # Set hostname
-  # Mount LUKS devices - hardware specific
-  boot.initrd.luks.devices."luks-ef9df4c6-1d01-40e9-a50f-37188dfe9655".device = "/dev/disk/by-uuid/ef9df4c6-1d01-40e9-a50f-37188dfe9655";
+  boot.initrd.luks.devices."luks-ef9df4c6-1d01-40e9-a50f-37188dfe9655".device = "/dev/disk/by-uuid/ef9df4c6-1d01-40e9-a50f-37188dfe9655"; # Mount LUKS devices - hardware specific
+  services.fwupd.enable = true; # Enable Framework BIOS updates
   hardware.framework.amd-7040.preventWakeOnAC = true; # Framework 13 wake fix
   #boot.extraModprobeConfig = "options snd-hda-intel model=dell-headset-multi"; # This was supposed to fix the issues with mic input thru the 3.5mm jack... It did not.
 
@@ -46,29 +46,6 @@
   programs.steam.enable = true;
   programs.fish.enable = true;
 
-  # Include fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Terminus" ]; })
-  ];
-
-  # Include dynamically linked executables (for running "impure" programs with minimal hassle)
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    # Add missing dynamic libraries for unpackaged programs here, not in environment.systemPackages
-  ];
-
-
-
-  # =============================================
-  # Services
-  # =============================================
-
-  services.xserver.xkb.layout = "us"; # Configure keymap (X11)
-  services.printing.enable = true; # Enable printing
-  hardware.bluetooth.enable = true; # Enable Bluetooth
-  services.openssh.enable = true; # Enable the OpenSSH daemon
-  services.fwupd.enable = true; # Enable Framework BIOS updates
-
   # Firewall
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -76,15 +53,4 @@
   # Enable KDE Plasma Desktop Environment & SDDM
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-
-
-
-  # =============================================
-  # Nix and NixOS Configuration
-  # =============================================
-
-  system.stateVersion = "24.11"; # Do NOT change (unless self-sabatoge will actually going to help somehow)
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enable Flakes & accompanying new nix command-line tool
-  nixpkgs.config.allowUnfree = true; # Allow unfree packages
-
 }

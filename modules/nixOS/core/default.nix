@@ -2,7 +2,7 @@
   imports = [
     ./boot
     ./internationalization.nix
-    ./network.nix
+    ./networking.nix
     ./user.nix
   ];
 }

@@ -1,5 +1,6 @@
 {  pkgs, ... }: {
   imports = [
+    ./displaymanager.nix
     ./efi.nix
     ./loader.nix
     ./initrd.nix

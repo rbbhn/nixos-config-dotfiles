@@ -21,31 +21,10 @@
 
 
 
-  # =============================================
-  # Packages, Apps, Fonts, and Dynamic Libraries
-  # =============================================
-
-  # Install packages
-  environment.systemPackages = with pkgs; [
-    kdePackages.kate
-    (discord.override { withVencord = true; withOpenASAR = true; })
-    prismlauncher
-    spotify
-    keepassxc
-    vlc
-    inputs.ghostty.packages.x86_64-linux.default
-    gh
-  ];
-
   # Install apps
   programs.firefox.enable = true;
   programs.steam.enable = true;
 
-  # Firewall
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-
-  # Enable KDE Plasma Desktop Environment & SDDM
-  services.displayManager.sddm.enable = true;
+  # Enable KDE Plasma Desktop Environment
   services.desktopManager.plasma6.enable = true;
 }

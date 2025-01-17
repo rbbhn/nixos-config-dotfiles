@@ -1,8 +1,9 @@
 {  pkgs, ... }: {
   imports = [
+    ./audio.nix
     ./boot
     ./internationalization.nix
     ./networking.nix
-    ./user.nix
+    ./users.nix
   ];
 }

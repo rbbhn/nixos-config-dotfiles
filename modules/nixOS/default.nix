@@ -4,7 +4,7 @@
     ./bluetooth.nix
     ./boot
     ./dynamiclibraries.nix
-    ./extrautils.nix
+    #./extrautils.nix
     ./fonts.nix
     ./internationalization.nix
     ./keymap.nix
@@ -14,7 +14,6 @@
     ./printing.nix
     ./shell.nix
     ./ssh.nix
-    ./systempkgs
     ./users.nix
   ];
 }

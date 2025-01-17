@@ -14,6 +14,6 @@
     ./printing.nix
     ./shell.nix
     ./ssh.nix
-    "./users/${username}.nix"
+    ./users/${username}.nix
   ];
 }

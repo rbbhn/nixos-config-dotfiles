@@ -10,22 +10,53 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-  # Laptop -----------------------------------------------------
-    nixosConfigurations.wing = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/wing/configuration.nix
-      ];
-    };
-  # Desktop ----------------------------------------------------
-    nixosConfigurations.nest = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/nest/configuration.nix
-      ];
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+    stateVersion = "";
+    system = "x86_64-linux";
+    username = "rbbhn";
+    laptop = "wing";
+    desktop = "nest";
+  in {
+    nixosConfigurations = {
+
+      # Laptop -----------------------------------------------------
+      ${laptop} = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = let
+          hostname = ${laptop}
+        in {
+          inherit
+            inputs
+            self
+            stateVersion
+            username
+            hostname
+            system
+          ;
+        };
+        modules = [
+          ./hosts/wing/configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              hostname = "wing";
+            };
+            home-manager.users.rbbhn = import ./modules/home/rbbhn;
+          }
+        ];
+      };
+
+      # Desktop ----------------------------------------------------
+      ${desktop} = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/nest/configuration.nix
+        ];
+      };
+
     };
   };
 }

@@ -33,18 +33,13 @@
     spotify
     keepassxc
     vlc
-    git
-    wget
-    openjdk
     inputs.ghostty.packages.x86_64-linux.default
-    fastfetch
     gh
   ];
 
   # Install apps
   programs.firefox.enable = true;
   programs.steam.enable = true;
-  programs.fish.enable = true;
 
   # Firewall
   # networking.firewall.allowedTCPPorts = [ ... ];

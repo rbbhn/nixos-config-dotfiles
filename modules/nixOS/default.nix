@@ -4,12 +4,12 @@
     ./bluetooth.nix
     ./boot
     ./dynamiclibraries.nix
-    #./extrautils.nix
+    ./extrautils.nix
     ./fonts.nix
     ./internationalization.nix
     ./keymap.nix
     ./networking.nix
-    ./nixox.nix
+    ./nixos.nix
     ./nixpkgs.nix
     ./printing.nix
     ./shell.nix

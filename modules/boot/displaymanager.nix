@@ -5,10 +5,10 @@
     font.name  = "Terminess Nerd Font Mono";
     font.size = 16;
     theme.package = pkgs.breeze-gtk;
-    theme.name = "Breeze Dark";
+    theme.name = "Breeze-Dark";
     iconTheme.package = pkgs.breeze-icons;
-    iconTheme.name = "Breeze Dark";
+    iconTheme.name = "Breeze-Dark";
     cursorTheme.package = pkgs.posy-cursors;
-    cursorTheme.name = "Posy's Cursor Black 125%/175% Scale";
+    cursorTheme.name = "Posy's Cursor Black";
   };
 }

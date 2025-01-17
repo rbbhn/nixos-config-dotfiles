@@ -5,4 +5,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
   };
+  inputs.home-manager.nixosModules.home-manager { # Define my user home-manager config
+    home-manager.users.rbbhn = import ./home/rbhhn;
+  };
 }

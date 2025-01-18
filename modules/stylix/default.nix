@@ -7,5 +7,6 @@
     image = config.lib.stylix.pixel "base0A";
 
     targets.gtk.enable = false;
+    targets.regreet.enable = false;
   };
 }

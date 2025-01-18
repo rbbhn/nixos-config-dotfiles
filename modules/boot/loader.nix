@@ -8,5 +8,6 @@
       efiSupport = true;
     };
     timeout = 0; # Prevent OS choice from appearing (unless key is pressed)
+    configurationLimit = 4; # Prevent /boot from filling and locking up the system from building
   };
 }

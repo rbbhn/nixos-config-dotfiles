@@ -1,15 +1,7 @@
 { pkgs, inputs, username, stateVersion, ... }: {
-  #imports = [
-  #    inputs.nvf.homeManagerModules.default
-  #    inputs.niri.homeModules.niri
-  #
-  #    ./fastfetch
-  #    ./fuzzel
-  #    ./shell
-  #    ./nvf
-  #    ./spotify-tui
-  #  ]
-  #  ++ lib.optional toad ./wayland;
+  imports = [
+    ./stylix.nix
+  ]
 
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";

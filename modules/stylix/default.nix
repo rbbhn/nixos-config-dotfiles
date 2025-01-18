@@ -3,7 +3,7 @@
   stylix.autoEnable = false;
 
   stylix.image = ./wallpaper.png;
-  /*stylix.base24Scheme = {
+  stylix.base24Scheme = {
     system = "base24";
     slug = "espresso";
     name = "Espresso";
@@ -27,5 +27,5 @@
       base0E = "#d197d9";
       base0F = "#692828";
     };
-  };*/
+  };
 }

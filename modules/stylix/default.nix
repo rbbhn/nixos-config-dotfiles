@@ -2,7 +2,7 @@
   stylix = {
     enable = true;
     image = ./wallpaper.png;
-    base16 = "${pkgs.base16-schemes}/share/themes/brushtrees-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/brushtrees-dark.yaml";
     fonts = {
       monospace = {
         package = (pkgs.nerdfonts.override { fonts = [ "Terminus" ]; });

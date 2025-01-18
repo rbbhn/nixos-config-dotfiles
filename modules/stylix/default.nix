@@ -1,8 +1,9 @@
 { pkgs, config, ... }: {
   stylix = {
     enable = true;
+    autoEnable = true;
     image = ./wallpaper.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-plateau-light.yaml";
+    /*base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-plateau-light.yaml";
     fonts = {
       monospace = {
         package = (pkgs.nerdfonts.override { fonts = [ "Terminus" ]; });
@@ -16,6 +17,6 @@
       package = pkgs.posy-cursors;
       name = "Posy's Cursor Black";
       size = 32;
-    };
+    };*/
   };
 }

@@ -21,4 +21,5 @@
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.stateVersion = "${stateVersion}";
+  home-manager.backupFileExtension = "backup";
 }

@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs.gtkgreet = {
+  programs.regreet = {
     enable = true;
   };
 }

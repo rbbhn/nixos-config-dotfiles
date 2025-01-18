@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     pipes
+    cmatrix
   ];
 
   # Let home Manager install and manage itself.

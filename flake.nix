@@ -39,7 +39,7 @@
             };
           }
 
-          stylix.nixosModules.stylix;
+          stylix.nixosModules.stylix
         ];
       };
 

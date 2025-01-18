@@ -9,9 +9,10 @@ in {
   stylix = {
     enable = true;
     autoEnable = true;
-    gtk.enable = false;
 
     image = wallpaper;
     base16Scheme = theme;
+
+    targets.gtk.enable = false;
   };
 }

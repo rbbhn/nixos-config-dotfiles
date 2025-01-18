@@ -30,6 +30,7 @@
           ./hosts/wing/configuration.nix
 
           home-manager.nixosModules.home-manager {
+            home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./modules/home/${username}.nix;

@@ -3,7 +3,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot
-    ./dynamiclibraries.nix
+    ./dynamic-libraries.nix
     ./extrautils.nix
     ./fonts.nix
     ./internationalization.nix
@@ -14,6 +14,6 @@
     ./printing.nix
     ./shell.nix
     ./ssh.nix
-    ./users/${username}.nix
+    ./user.nix
   ];
 }

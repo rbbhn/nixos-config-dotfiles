@@ -16,7 +16,7 @@
     username = "rbbhn";
     laptop = "wing";
     desktop = "nest";
-  in {
+  in{
     nixosConfigurations = {
 
       # Laptop -----------------------------------------------------

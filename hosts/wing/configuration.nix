@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }: {
   imports = [
-    ./hardware-configuration.nix
     ./../../modules
+    ./hardware-configuration.nix
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
   ];
 

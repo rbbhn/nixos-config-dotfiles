@@ -1,10 +1,10 @@
 {  pkgs, ... }: {
   imports = [
-    ./displaymanager.nix
+    ./display-manager.nix
     ./efi.nix
     ./loader.nix
     ./initrd.nix
-    ./kernelParameters.nix
+    ./kernel-parameters.nix
     ./plymouth.nix
   ];
 }

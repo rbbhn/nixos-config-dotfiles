@@ -1,4 +1,4 @@
-{  pkgs, username, ... }: {
+{ pkgs, username, ... }: {
   users.users.${username} = { # Define my user account
     isNormalUser = true;
     description = "${username}";

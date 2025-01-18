@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11"; # NixOS official package source, using the nixos-24.11 branch here
-    stylix.url = "github:danth/stylix/release-24.11";
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -11,7 +10,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
     stateVersion = "24.11";
     system = "x86_64-linux";
     username = "rbbhn";

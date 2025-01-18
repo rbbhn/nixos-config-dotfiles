@@ -6,11 +6,11 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
+    stylix.url = "github:danth/stylix/release-24.11";
     ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: let
     stateVersion = "24.11";
     system = "x86_64-linux";
     username = "rbbhn";

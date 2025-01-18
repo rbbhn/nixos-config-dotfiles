@@ -1,7 +1,7 @@
 { pkgs, inputs, username, stateVersion, ... }: {
   imports = [
     ./stylix.nix
-  ]
+  ];
 
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";

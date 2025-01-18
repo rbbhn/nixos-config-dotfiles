@@ -8,7 +8,8 @@
 in {
   stylix = {
     enable = true;
-    autoEnable = false;
+    autoEnable = true;
+    gtk.enable = false;
 
     image = wallpaper;
     base16Scheme = theme;

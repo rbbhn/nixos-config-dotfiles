@@ -38,8 +38,6 @@
               hostname = "${laptop}";
             };
           }
-
-          stylix.nixosModules.stylix
         ];
       };
 

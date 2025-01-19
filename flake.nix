@@ -21,11 +21,14 @@
 
       # Laptop -----------------------------------------------------
       ${laptop} = nixpkgs.lib.nixosSystem {
+
         system = "${system}";
+
         specialArgs = let hostname = "${laptop}"; in {
           inherit inputs self stateVersion username hostname system;
         };
-        modules = [
+
+        modules = let hostname = "${laptop}"; in [
 
           ./common/nixos
           ./hosts/${hostname}/nixos
@@ -46,7 +49,9 @@
 
           nixos-hardware.nixosModules.framework-13-7040-amd
         ];
+
       };
+
 
       # Desktop ----------------------------------------------------
       /*${desktop} = nixpkgs.lib.nixosSystem {

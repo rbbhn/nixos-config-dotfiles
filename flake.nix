@@ -10,7 +10,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: let
     stateVersion = "24.11";
     system = "x86_64-linux";
     username = "rbbhn";
@@ -38,8 +38,7 @@
                 /**/./hosts/${hostname}/home-manager
               ]; };
               extraSpecialArgs = {
-                inherit inputs self stateVersion username system;
-                hostname = "${laptop}";
+                inherit inputs self stateVersion username hostname system;
               };
             };
           }

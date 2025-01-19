@@ -1,7 +1,7 @@
 { pkgs, inputs, username, stateVersion, ... }: {
   imports = [
     ./stylix.nix
-    ./fastfetch
+    ./fastfetch.nix
   ];
 
   home.username = "${username}";

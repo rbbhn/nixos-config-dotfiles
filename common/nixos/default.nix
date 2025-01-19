@@ -14,7 +14,7 @@
     ./printing.nix
     ./shell.nix
     ./ssh.nix
-    ./stylix
+    ./stylix.nix
     ./user.nix
   ];
 }

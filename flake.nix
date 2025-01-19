@@ -30,24 +30,25 @@
 
         modules = let hostname = "${laptop}"; in [
 
+          #NixOS Modules
           ./common/nixos
           ./hosts/${hostname}/nixos
 
           home-manager.nixosModules.home-manager {
-            #home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import [
+
+              #Home Manager Modules
               ./common/home-manager
               ./hosts/${hostname}/home-manager
+
             ];
             home-manager.extraSpecialArgs = {
               inherit inputs self stateVersion username system;
               hostname = "${laptop}";
             };
           }
-
-          nixos-hardware.nixosModules.framework-13-7040-amd
         ];
 
       };

@@ -10,7 +10,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
     stateVersion = "24.11";
     system = "x86_64-linux";
     username = "rbbhn";
@@ -24,14 +24,16 @@
         system = "${system}";
 
         modules = let hostname = "${laptop}"; in [
+          ./common/nixos # Import common NixOS modules
+          ./hosts/${hostname}/nixos # Import machine-specific NixOS modules
+
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               users.${username} = { ... }: { imports = [
-                /**/# Home Manager Modules ------------------------------
-                /**/./common/home-manager
-                /**/./hosts/${hostname}/home-manager
+                ./common/home-manager # Import common home-manager modules
+                ./hosts/${hostname}/home-manager # Import machine-specific home-manager modules
               ]; };
 
               extraSpecialArgs = {
@@ -39,11 +41,6 @@
               };
             };
           }
-
-          /**/# NixOS Modules -------------------------------------------
-          /**/./common/nixos
-          /**/./hosts/${hostname}/nixos
-          /**/stylix.nixosModules.stylix
         ];
 
         specialArgs = let hostname = "${laptop}"; in {

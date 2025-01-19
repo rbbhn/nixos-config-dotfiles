@@ -1,7 +1,14 @@
 {...}: {
   programs.fastfetch.enable = true;
   programs.fastfetch.settings = {
-    logo = "logo.txt";
+    logo = {
+      type = "data";
+      source = "(`/\\\n`=\\/\\\n `=\\/\n    \\";
+      padding = {
+        top = 1;
+        right = 2;
+      };
+    };
     display = {
       separator = " > ";
       color = {
@@ -9,6 +16,7 @@
       };
     };
     modules = [
+      "break"
       {
         type = "title";
         format = "{#1;34}{user-name}{#0;1}@{#0;1;34}{host-name}{#}";
@@ -31,6 +39,7 @@
         format = "{1}";
         outputColor = "35";
       }
+      "break"
     ];
   };
 }

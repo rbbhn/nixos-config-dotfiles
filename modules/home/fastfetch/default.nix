@@ -1,7 +1,7 @@
 {...}: {
   programs.fastfetch.enable = true;
   programs.fastfetch.settings = {
-    #logo = null;
+    logo = "logo.txt";
     display = {
       separator = " > ";
       color = {

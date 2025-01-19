@@ -10,7 +10,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, ... }@inputs: let
     stateVersion = "24.11";
     system = "x86_64-linux";
     username = "rbbhn";

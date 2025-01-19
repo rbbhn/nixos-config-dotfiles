@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
     ./hardware-configuration.nix
-    ./hardware.nix
+    ./nixos-hardware.nix
     ./luks.nix
   ];
 

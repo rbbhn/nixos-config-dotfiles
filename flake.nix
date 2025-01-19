@@ -24,24 +24,26 @@
         system = "${system}";
 
         modules = let hostname = "${laptop}"; in [
-          /**/# NixOS Modules -------------------------------------------
-          /**/./common/nixos
-          /**/./hosts/${hostname}/nixos
-          /**/stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               users.${username} = { ... }: { imports = [
-                # Home Manager Modules ------------------------------
+                /**/# Home Manager Modules ------------------------------
                 /**/./common/home-manager
                 /**/./hosts/${hostname}/home-manager
               ]; };
+
               extraSpecialArgs = {
                 inherit inputs self stateVersion username hostname system;
               };
             };
           }
+
+          /**/# NixOS Modules -------------------------------------------
+          /**/./common/nixos
+          /**/./hosts/${hostname}/nixos
+          /**/stylix.nixosModules.stylix
         ];
 
         specialArgs = let hostname = "${laptop}"; in {

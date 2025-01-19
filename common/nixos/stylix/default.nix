@@ -1,4 +1,7 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, inputs, ... }: {
+  imports = [
+    stylix.nixosModules.stylix
+  ];
   stylix = {
     enable = true;
     autoEnable = true;

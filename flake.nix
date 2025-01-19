@@ -26,30 +26,31 @@
           inherit inputs self stateVersion username hostname system;
         };
         modules = [
-          ./hosts/wing/configuration.nix
+
+          ./common/nixos
+          ./hosts/${hostname}/nixos
 
           home-manager.nixosModules.home-manager {
             #home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./modules/home/${username};
+            home-manager.users.${username} = import [
+              ./common/home-manager
+              ./hosts/${hostname}/home-manager
+            ];
             home-manager.extraSpecialArgs = {
               inherit inputs self stateVersion username system;
               hostname = "${laptop}";
             };
           }
 
-          stylix.nixosModules.stylix
+          nixos-hardware.nixosModules.framework-13-7040-amd
         ];
       };
 
       # Desktop ----------------------------------------------------
       /*${desktop} = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/nest/configuration.nix
-        ];
+
       };*/
 
     };

@@ -32,7 +32,7 @@
             #home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./modules/home/${username}.nix;
+            home-manager.users.${username} = import ./modules/home/${username};
             home-manager.extraSpecialArgs = {
               inherit inputs self stateVersion username system;
               hostname = "${laptop}";

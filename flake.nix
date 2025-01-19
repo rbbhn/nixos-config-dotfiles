@@ -39,13 +39,14 @@
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${username} = import [
+            home-manager.users.${username} = { ... }: {
+              imports = [
+                #Home Manager Modules
+                ./common/home-manager
+                #./hosts/${hostname}/home-manager
+              ];
 
-              #Home Manager Modules
-              ./common/home-manager
-              ./hosts/${hostname}/home-manager
-
-            ];
+            };
             home-manager.extraSpecialArgs = {
               inherit inputs self stateVersion username system;
               hostname = "${laptop}";

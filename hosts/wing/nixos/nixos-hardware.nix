@@ -1,6 +1,6 @@
-{ inputs, ... }: {
+{ nixos-hardware, ... }: {
   imports = [
-    inputs.nixos-hardware.nixosModules.framework-13-7040-amd
+    nixos-hardware.nixosModules.framework-13-7040-amd
   ];
 
   services.fwupd.enable = true; # Enable Framework BIOS updates

@@ -33,6 +33,8 @@
           #NixOS Modules
           ./common/nixos
           ./hosts/${hostname}/nixos
+          nixos-hardware.nixosModules.framework-13-7040-amd
+          stylix.nixosModules.stylix
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;

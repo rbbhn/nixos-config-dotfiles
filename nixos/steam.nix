@@ -1,3 +1,3 @@
 { ... }: {
-  programs.steam.enable; # THIS HAS TO BE DONE HERE. opengl shit.
+  programs.steam.enable = true; # THIS HAS TO BE DONE HERE. opengl shit.
 }

@@ -1,5 +1,5 @@
 { hostname, username, ... }: {
   imports = [
-    steam.nix
+    ./steam.nix
   ];
 }

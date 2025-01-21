@@ -1,5 +1,5 @@
 { username, ... }: {
   imports = [
-    ./fastfetch.nix
+    ./fastfetch-config.nix
   ];
 }

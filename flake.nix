@@ -29,7 +29,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.${username} = import ./home-manager/${username}.nix; # Import home-manager modules
+              users.${username} = import ./home-manager; # Import home-manager modules
 
               extraSpecialArgs = {
                 inherit self inputs stateVersion username hostname system;

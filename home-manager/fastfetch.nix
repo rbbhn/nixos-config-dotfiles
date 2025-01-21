@@ -36,9 +36,15 @@
       }
       {
         type = "shell";
-        key = "{#34}└{#0;35} SHELL";
+        key = "{#34}├{#0;35} SHELL";
         format = "{1}";
         outputColor = "35";
+      }
+      {
+        type = "uptime";
+        key = "{#34}└{#0;36} UP   ";
+        format = "{1}";
+        outputColor = "36";
       }
       "break"
     ];

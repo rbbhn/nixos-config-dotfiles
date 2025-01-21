@@ -3,7 +3,7 @@
   programs.fastfetch.settings = {
     logo = {
       type = "data";
-      source = "(`/\\\n`=\\/\\\n `=\\/\n    \\";
+      source = " /\\ /\\\n((ovo))\n():::()\n  VVV";
       padding = {
         left = 2;
         right = 2;

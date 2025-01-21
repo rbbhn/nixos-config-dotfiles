@@ -1,4 +1,4 @@
-{ username, stateVersion, ... }: {
+{ pkgs, username, stateVersion, ... }: {
   imports = [
     ./${username}.nix # Import user-specific modules
 

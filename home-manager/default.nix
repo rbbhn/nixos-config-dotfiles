@@ -2,8 +2,10 @@
   imports = [
     ./${username}.nix # Import user specific modules. Done this way so that username.nix can import modules that are the same between users that not all users have, and /username/default.nix can import modules that are unique to each user.
 
+    ./discord.nix
     ./home-manager.nix # DO NOT REMOVE
     ./fastfetch.nix
+    ./minecraft.nix
     ./stylix.nix
   ];
 
@@ -19,9 +21,6 @@
     gh # github command line
 
     kdePackages.kate
-    (discord.override { withVencord = true; })
-    prismlauncher
-    openjdk # bundle with prismlauncher :)
     spotify
     keepassxc
     vlc

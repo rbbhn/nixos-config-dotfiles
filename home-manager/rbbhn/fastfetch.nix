@@ -1,47 +1,51 @@
 { ... }: {
+  programs.fastfetch.enable = true;
   programs.fastfetch.settings = {
     logo = {
       type = "data";
-      source = "     .-.\n    /^v^\\\n   (/   \\)\n=====\"=\"=-\n     |_|";
+      color = {
+        "1" = "90";
+      };
+      source = "    .-.\n   /^v^\\\n  (/   \\)\n====\"=\"=-\n    |_|";
       padding = {
         left = 0;
         right = 2;
       };
     };
     display = {
-      separator = " > ";
+      separator = " ➤ ";
       color = {
-        separator = "34";
+        separator = "90";
       };
     };
     modules = [
       {
         type = "title";
-        format = "{#1;34}{user-name}{#0;1}@{#0;1;34}{host-name}{#}";
+        format = "{#1;35}{user-name}{#0;1;37}@{#0;1;35}{host-name}{#}";
       }
       {
         type = "os";
-        key = "{#34}┌{#0;31} OS   ";
+        key = "{#90}┌{#0;91} OS   ";
         format = "{2}";
-        outputColor = "31";
+        outputColor = "91";
       }
       {
         type = "packages";
-        key = "{#34}├{#0;33} PKGS ";
+        key = "{#90}├{#0;93} PKGS ";
         format = "{1}";
-        outputColor = "33";
+        outputColor = "93";
       }
       {
         type = "shell";
-        key = "{#34}├{#0;35} SHELL";
+        key = "{#90}├{#0;92} SHELL";
         format = "{1}";
-        outputColor = "35";
+        outputColor = "92";
       }
       {
         type = "datetime";
-        key = "{#34}└{#0;36} DATE ";
+        key = "{#90}└{#0;94} DATE ";
         format = "{6} {11}";
-        outputColor = "36";
+        outputColor = "94";
       }
     ];
   };

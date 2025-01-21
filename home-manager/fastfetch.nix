@@ -7,7 +7,6 @@
       padding = {
         left = 0;
         right = 2;
-        top = 1;
       };
     };
     display = {

@@ -24,16 +24,16 @@
         system = "${system}";
 
         modules = let hostname = "${laptop}"; in [
-          ./common/nixos # Import common NixOS modules
-          ./hosts/${hostname}/nixos # Import machine-specific NixOS modules
+          ./modules/nixos/common # Import common NixOS modules
+          ./modules/nixos/${hostname}.nix # Import MACHINE-specific NixOS modules
 
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               users.${username} = { ... }: { imports = [
-                ./common/home-manager # Import common home-manager modules
-                ./hosts/${hostname}/home-manager # Import machine-specific home-manager modules
+                ./modules/home-manager/common # Import common home-manager modules
+                ./modules/home-manager/${usernamer}.nix # Import USER-specific home-manager modules
               ]; };
 
               extraSpecialArgs = {

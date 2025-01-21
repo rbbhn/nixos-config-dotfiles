@@ -33,7 +33,7 @@
               useUserPackages = true;
               users.${username} = { ... }: { imports = [
                 ./modules/home-manager/common # Import common home-manager modules
-                ./modules/home-manager/${usernamer}.nix # Import USER-specific home-manager modules
+                ./modules/home-manager/${username}.nix # Import USER-specific home-manager modules
               ]; };
 
               extraSpecialArgs = {

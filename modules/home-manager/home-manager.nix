@@ -1,5 +1,4 @@
 { username, stateVersion, ... }: {
-
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
 

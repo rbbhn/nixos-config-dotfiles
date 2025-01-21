@@ -26,7 +26,7 @@
     spotify
     keepassxc
     vlc
-    inputs.ghostty.packages.x86_64-linux.default
+    ghostty
   ];
 
   #move to user zone

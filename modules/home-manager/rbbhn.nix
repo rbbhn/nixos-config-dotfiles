@@ -1,7 +1,7 @@
 { pkgs, username, stateVersion, ... }: {
   imports = [
+    ./home-manager.nix # DO NOT REMOVE
     ./fastfetch.nix
-    ./home-manager.nix
     ./stylix.nix
   ];
 

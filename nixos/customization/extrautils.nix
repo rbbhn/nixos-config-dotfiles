@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     #DO NOT MOVE TO USER ZONE
     gd # "gdown" - wget for google drive links

@@ -16,7 +16,6 @@
       };
     };
     modules = [
-      "break"
       {
         type = "title";
         format = "{#1;34}{user-name}{#0;1}@{#0;1;34}{host-name}{#}";

@@ -5,7 +5,7 @@
       type = "data";
       source = "     .-.\n    /'v'\\\n   (/   \\)\n=====\"=\"=>\n   |_|";
       padding = {
-        left = 2;
+        left = 0;
         right = 2;
         top = 1;
       };

@@ -18,7 +18,7 @@
     desktop = "nest";
   in{
     nixosConfigurations = {
-      # Laptop=======================================================
+      # Laptop====================================================
       ${laptop} = nixpkgs.lib.nixosSystem {
 
         system = "${system}";
@@ -45,7 +45,7 @@
       };
 
 
-      # Desktop======================================================
+      # Desktop===================================================
       /*${desktop} = nixpkgs.lib.nixosSystem {
 
       };*/

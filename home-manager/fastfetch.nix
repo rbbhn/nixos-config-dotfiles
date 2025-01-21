@@ -44,7 +44,6 @@
         format = "{6} {11}";
         outputColor = "36";
       }
-      "break"
     ];
   };
 }

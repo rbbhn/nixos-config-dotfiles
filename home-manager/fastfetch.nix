@@ -43,7 +43,7 @@
       {
         type = "uptime";
         key = "{#34}└{#0;36} UP   ";
-        format = "{4}";
+        #format = "{4}";
         outputColor = "36";
       }
       "break"

@@ -1,7 +1,6 @@
 { pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     #DO NOT MOVE TO USER ZONE
-    #fastfetch
     gd # "gdown" - wget for google drive links
     progress # "progress - for fetching status of loooong commands
     wget

@@ -1,3 +1,5 @@
 { username, ... }: {
-  # Fill in later
+  imports = [
+    ./fastfetch.nix
+  ];
 }

@@ -43,7 +43,7 @@
       {
         type = "datetime";
         key = "{#34}└{#0;36} DATE ";
-        format = "{0}";
+        format = "{6} {11}";
         outputColor = "36";
       }
       "break"

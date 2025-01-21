@@ -1,5 +1,7 @@
 { pkgs, inputs, username, stateVersion, ... }: {
   imports = [
+    ./${username}.nix # Import user-specific modules
+
     ./stylix.nix
     ./fastfetch.nix
   ];

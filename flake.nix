@@ -31,8 +31,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.${username} = { ... }: { imports = [
-                ./modules/home-manager/common # Import home-manager modules
-                ./modules/home-manager/${username}.nix # Import USER-specific home-manager modules
+                ./modules/home-manager # Import home-manager modules
               ]; };
 
               extraSpecialArgs = {

@@ -1,5 +1,5 @@
 { ... }: {
   imports = [
-    ./wing
+    ./nest
   ];
 }

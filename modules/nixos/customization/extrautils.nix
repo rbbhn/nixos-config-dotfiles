@@ -21,7 +21,7 @@
     gh # github command line
 
     kdePackages.kate
-    (discord.override { withVencord = true; withOpenASAR = true; })
+    (discord.override { withVencord = true; })
     prismlauncher
     spotify
     keepassxc

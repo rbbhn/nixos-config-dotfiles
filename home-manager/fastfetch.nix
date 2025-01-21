@@ -41,9 +41,9 @@
         outputColor = "35";
       }
       {
-        type = "uptime";
+        type = "datetime";
         key = "{#34}└{#0;36} UP   ";
-        #format = "{4}";
+        format = "{2}";
         outputColor = "36";
       }
       "break"

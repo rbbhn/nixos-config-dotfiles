@@ -32,14 +32,14 @@
               users.${username} = import ./home-manager/${username}.nix; # Import home-manager modules
 
               extraSpecialArgs = {
-                inherit inputs self stateVersion username hostname system;
+                inherit self inputs stateVersion username hostname system;
               };
             };
           }
         ];
 
         specialArgs = let hostname = "${laptop}"; in {
-          inherit inputs self stateVersion username hostname system;
+          inherit self inputs stateVersion username hostname system;
         };
       };
 

@@ -7,6 +7,7 @@
     lazygit
     ranger
     gh
+    glow
 
     # GUI
     kdePackages.kate

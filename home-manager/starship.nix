@@ -3,7 +3,7 @@
     enable = true;
     enableFishIntegration = true;
   };
-  programs.fish.interactiveShellInit = "starship init fish | source";
+  programs.fish.interactiveShellInit = "set fish_greeting # Disable greeting & starship init fish | source";
 
   imports = [
     ./${username}/starship-config.nix

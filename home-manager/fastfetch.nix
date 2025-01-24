@@ -4,6 +4,6 @@
   };
 
   imports = [
-    ${username}.fastfetch-config.nix
+    ./${username}.fastfetch-config.nix
   ];
 }

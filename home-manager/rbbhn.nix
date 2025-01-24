@@ -1,8 +1,8 @@
 { username, ... }: {
   imports = [
-    ./${username}
-
     ./discord.nix
+    ./fastfetch.nix
     ./minecraft.nix
+    ./starship.nix
   ];
 }

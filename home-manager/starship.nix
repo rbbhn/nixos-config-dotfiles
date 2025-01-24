@@ -5,6 +5,6 @@
   };;
 
   imports = [
-    ./${username}.starship-config.nix
+    ./${username}/starship-config.nix
   ];
 }

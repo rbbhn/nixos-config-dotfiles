@@ -4,7 +4,5 @@
     enableFishIntegration = true;
   };
 
-  imports = [
-    ./${username}/starship-config.nix
-  ];
+  imports = [ ./${username}/starship-config.nix ];
 }

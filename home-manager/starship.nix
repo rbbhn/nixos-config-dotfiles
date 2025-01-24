@@ -3,7 +3,7 @@
     enable = true;
     enableFishIntegration = true;
   };
-  programs.fish.interactiveShellInit = "echo KYS";
+  programs.fish.shellInitLast = "echo KYS";
 
   imports = [
     ./${username}/starship-config.nix

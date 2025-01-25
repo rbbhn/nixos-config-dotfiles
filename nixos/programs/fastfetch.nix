@@ -1,3 +1,3 @@
-{ username, ... }: {
+{ pkgs, ... }: {
   programs.fastfetch.enable = true;
 }

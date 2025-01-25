@@ -2,6 +2,7 @@
   imports = [
     ./discord.nix
     ./minecraft.nix
-    ./starship.nix
+
+    ./${username}/fastfetch-config.nix
   ];
 }

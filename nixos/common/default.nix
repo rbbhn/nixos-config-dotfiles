@@ -3,7 +3,6 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot
-    ./customization
     ./dynamic-libraries.nix
     ./fonts.nix
     ./extrautils.nix

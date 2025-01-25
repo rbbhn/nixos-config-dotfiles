@@ -1,5 +1,5 @@
-{ ... }: {
+{ hostname, ... }: {
   imports = [
-    ./nest
+    ./${hostname}
   ];
 }

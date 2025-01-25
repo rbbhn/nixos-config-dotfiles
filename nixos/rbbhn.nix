@@ -1,5 +1,7 @@
-{ hostname, username, ... }: {
+{ username, ... }: {
   imports = [
+    ./${username}
+
     ./steam.nix
   ];
 }

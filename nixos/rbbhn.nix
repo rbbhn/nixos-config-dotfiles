@@ -1,8 +1,8 @@
 { username, ... }: {
   imports = [
-    ./${username}
-
-    ./de-wms/plasma6.nix
-    ./steam.nix
+    ./programs/de-wms/plasma6.nix
+    ./programs/steam.nix
+    ./programs/fastfetch.nix
+    ./${username}/fastfetch-config.nix
   ];
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, nixpkgs_unstable, ... }: {
   environment.systemPackages = with pkgs; [
     # These packages remain UNCONFIGURED - if needed, separate into modules and configure.
     git

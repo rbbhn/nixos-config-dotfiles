@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # These packages remain UNCONFIGURED - if needed, separate into modules and configure.
-    # git
+    git
     wget
 
     # Pull progs. out and make individual modules when programs gain home-manager configs

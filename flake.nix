@@ -25,13 +25,11 @@
 
         modules = let hostname = "${laptop}"; in [
           ./nixos # Import NixOS Modules
-
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               users.${username} = import ./home-manager; # Import home-manager modules
-
               extraSpecialArgs = {
                 inherit self inputs stateVersion username hostname system;
               };

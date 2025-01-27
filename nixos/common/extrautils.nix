@@ -1,4 +1,4 @@
-{ pkgs, unstable, ... }@inputs: {
+{ pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     # These packages remain UNCONFIGURED - if needed, separate into modules and configure.
     git
@@ -19,7 +19,7 @@
     keepassxc
     vlc
     ghostty
-    unstable.logseq
+    inputs.unstable.logseq
   ];
 
   # Install apps

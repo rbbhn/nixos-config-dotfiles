@@ -33,7 +33,7 @@
               users.${username} = import ./home-manager; # Import home-manager modules
 
               extraSpecialArgs = {
-                inherit self inputs unstable stateVersion username hostname system;
+                inherit self inputs stateVersion username hostname system;
               };
             };
           }

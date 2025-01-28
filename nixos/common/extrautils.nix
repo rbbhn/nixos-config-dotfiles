@@ -12,6 +12,7 @@
     ranger
     gh
     glow
+    rogue
 
     # GUI
     kdePackages.kate

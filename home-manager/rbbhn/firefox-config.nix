@@ -134,16 +134,16 @@
         "webgl.renderer-string-override" = " ";
         "webgl.vendor-string-override" = " ";
       };
-      policies = {
-        "NetworkPrediction" = false;
-        "CaptivePortal" = false;
-        "DNSOverHTTPS" = {
-          "Enabled" = false;
-        };
-        "DisableFirefoxStudies" = true;
-        "DisableTelemetry" = true;
-        "DisablePocket" = true;
+    };
+    policies = {
+      "NetworkPrediction" = false;
+      "CaptivePortal" = false;
+      "DNSOverHTTPS" = {
+        "Enabled" = false;
       };
+      "DisableFirefoxStudies" = true;
+      "DisableTelemetry" = true;
+      "DisablePocket" = true;
     };
   };
 }

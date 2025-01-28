@@ -19,7 +19,5 @@
     keepassxc
     vlc
     ghostty
-
-    firefox
   ];
 }

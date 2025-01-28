@@ -135,7 +135,7 @@
         "webgl.vendor-string-override" = " ";
       };
     };
-    /* policies = {
+    policies = {
       "NetworkPrediction" = false;
       "CaptivePortal" = false;
       "DNSOverHTTPS" = {
@@ -144,6 +144,6 @@
       "DisableFirefoxStudies" = true;
       "DisableTelemetry" = true;
       "DisablePocket" = true;
-    }; */
+    };
   };
 }

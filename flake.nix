@@ -29,6 +29,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              backupFileExtension = "backup"; # Allow home-manager to override manual config files
               users.${username} = import ./home-manager; # Import home-manager modules
               extraSpecialArgs = {
                 inherit self inputs stateVersion username hostname system;

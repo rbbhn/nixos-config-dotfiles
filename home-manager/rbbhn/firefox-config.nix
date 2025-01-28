@@ -29,9 +29,11 @@
         "browser.crashReports.unsubmittedCheck.autoSubmit2" = false;
         "browser.crashReports.unsubmittedCheck.enabled" = false;
         "browser.disableResetPrompt" = true;
+        "browser.download.useDownloadDir" = false;
         "browser.fixup.alternate.enabled" = false;
         "browser.newtab.preload" = false;
         "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
+        "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
         "browser.newtabpage.enabled" = false;
         "browser.newtabpage.enhanced" = false;
         "browser.newtabpage.introShown" = true;
@@ -48,12 +50,14 @@
         "browser.send_pings" = false;
         "browser.sessionstore.privacy_level" = 2;
         "browser.shell.checkDefaultBrowser" = false;
+        "browser.startup.homepage" = "chrome://browser/content/blanktab.html";
         "browser.startup.homepage_override.mstone" = "ignore";
         "browser.tabs.crashReporting.sendReport" = false;
         "browser.urlbar.groupLabels.enabled" = false;
         "browser.urlbar.quicksuggest.enabled" = false;
         "browser.urlbar.speculativeConnect.enabled" = false;
         "browser.urlbar.trimURLs" = false;
+        "browser.warnOnQuit" = false;
         "datareporting.healthreport.service.enabled" = false;
         "datareporting.healthreport.uploadEnabled" = false;
         "datareporting.policy.dataSubmissionEnabled" = false;
@@ -86,6 +90,7 @@
         "extensions.shield-recipe-client.enabled" = false;
         "extensions.webservice.discoverURL" = "";
         "general.useragent.override" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.";
+        "general.autoScroll" = true;
         "keyword.enabled" = false;
         "media.autoplay.default" = 1;
         "media.autoplay.enabled" = false;
@@ -94,6 +99,7 @@
         "media.navigator.enabled" = false;
         "media.peerconnection.enabled" = false;
         "media.video_stats.enabled" = false;
+        "media.videocontrols.picture-in-picture.video-toggle.enabled" = false;
         "network.IDN_show_punycode" = true;
         "network.allow-experiments" = false;
         "network.captive-portal-service.enabled" = false;

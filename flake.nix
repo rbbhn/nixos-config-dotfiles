@@ -19,7 +19,7 @@
     laptop = "wing";
     desktop = "nest";
   in{
-    overlays = [ nur.overlays.default ]
+    overlays = [ nur.overlays.default ];
     nixosConfigurations = {
       # Laptop====================================================
       ${laptop} = nixpkgs.lib.nixosSystem {

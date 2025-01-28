@@ -158,42 +158,14 @@
         "webgl.vendor-string-override" = " ";
       };
       policies = {
-        "policies": {
-          "ExtensionSettings": {
-            "{c607c8df-14a7-4f28-894f-29e8722976af}": {
-              "install_url": "https://addons.mozilla.org/firefox/downloads/latest/temporary-containers/latest.xpi",
-              "installation_mode": "normal_installed"
-            },
-            "jid1-BoFifL9Vbdl2zQ@jetpack": {
-              "install_url": "https://addons.mozilla.org/firefox/downloads/latest/decentraleyes/latest.xpi",
-              "installation_mode": "normal_installed"
-            },
-            "uMatrix@raymondhill.net": {
-              "install_url": "https://addons.mozilla.org/firefox/downloads/latest/umatrix/latest.xpi",
-              "installation_mode": "normal_installed"
-            },
-            "uBlock0@raymondhill.net": {
-              "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
-              "installation_mode": "normal_installed"
-            },
-            "jid1-MnnxcxisBPnSXQ@jetpack": {
-              "install_url": "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi",
-              "installation_mode": "normal_installed"
-            },
-            "CanvasBlocker@kkapsner.net": {
-              "install_url": "https://addons.mozilla.org/firefox/downloads/latest/canvasblocker/latest.xpi",
-              "installation_mode": "normal_installed"
-            }
-          },
-          "NetworkPrediction": false,
-          "CaptivePortal": false,
-          "DNSOverHTTPS": {
-            "Enabled": false
-          },
-          "DisableFirefoxStudies": true,
-          "DisableTelemetry": true,
-          "DisablePocket": true
-        }
+        "NetworkPrediction" = false;
+        "CaptivePortal" = false;
+        "DNSOverHTTPS" = {
+          "Enabled" = false;
+        };
+        "DisableFirefoxStudies" = true;
+        "DisableTelemetry" = true;
+        "DisablePocket" = true;
       };
     };
   };

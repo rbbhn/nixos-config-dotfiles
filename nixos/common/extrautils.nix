@@ -20,4 +20,6 @@
     vlc
     ghostty
   ];
+
+  programs.firefox.enable = false;
 }

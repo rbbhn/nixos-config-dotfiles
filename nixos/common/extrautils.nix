@@ -1,5 +1,5 @@
-{ pkgs, nur, ... }: {
-  imports = [ nur.modules.nixos.default ];
+{ pkgs, inputs ... }: {
+  imports = [ inputs.nur.modules.nixos.default ];
   environment.systemPackages = with pkgs; [
     # These packages remain UNCONFIGURED - if needed, separate into modules and configure.
     git

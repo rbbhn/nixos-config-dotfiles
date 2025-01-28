@@ -12,7 +12,7 @@
     stylix.url = "github:danth/stylix/release-24.11";
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
     stateVersion = "24.11";
     system = "x86_64-linux";
     username = "rbbhn";

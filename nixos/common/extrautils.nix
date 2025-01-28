@@ -19,8 +19,7 @@
     keepassxc
     vlc
     ghostty
-  ];
 
-  # Install apps
-  programs.firefox.enable = true;
+    firefox
+  ];
 }

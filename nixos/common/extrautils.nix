@@ -12,8 +12,7 @@
     ranger
     gh
     glow
-    rogue
-    ncurses
+    brogue-ce
 
     # GUI
     kdePackages.kate

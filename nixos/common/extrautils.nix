@@ -12,7 +12,6 @@
     ranger
     gh
     glow
-    brogue-ce
 
     # GUI
     kdePackages.kate

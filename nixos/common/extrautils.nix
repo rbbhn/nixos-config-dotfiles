@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, nur, ... }: {
   environment.systemPackages = with pkgs; [
     # These packages remain UNCONFIGURED - if needed, separate into modules and configure.
     git
@@ -28,7 +28,7 @@
       id = 0;
       name = "modern-hardened";
       isDefault = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [ # Stolen from nmasur's dotfiles - thanks!
+      extensions = with nur.repos.rycee.firefox-addons; [ # Stolen from nmasur's dotfiles - thanks!
         canvasblocker # Prevent privacy exploit with <canvs>
         decentraleyes # Prevents privacy exploit by locally injecting CDN resources
         don-t-fuck-with-paste # Prevents websites from fucking with paste

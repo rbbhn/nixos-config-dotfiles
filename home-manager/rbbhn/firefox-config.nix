@@ -70,6 +70,9 @@
     };
 
     policies = {
+      #################
+      # Policy Config #
+      #################
       "NetworkPrediction" = false;
       "CaptivePortal" = false;
       "DNSOverHTTPS" = {
@@ -79,9 +82,6 @@
       "DisableTelemetry" = true;
       "DisablePocket" = true;
 
-      ##############
-      # Extensions #
-      ##############
         /* extensions = with inputs.firefox-addons.packages.${pkgs.system}; [ # Stolen from nmasur's dotfiles - thanks!
         canvasblocker # Prevent privacy exploit with <canvs>
         decentraleyes # Prevents privacy exploit by locally injecting CDN resources
@@ -91,6 +91,10 @@
         temporary-containers # Temporary containers
         umatrix # Advanced content blocking
       ]; */
+
+      ##############
+      # Extensions #
+      ##############
       "ExtensionSettings" = {
         "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
         "uBlock0@raymondhill.net" = { # uBlock Origin
@@ -103,6 +107,9 @@
         };
       };
 
+      ###############
+      # Preferences # --- Basically, the shared config settings between both profiles
+      ###############
       "Preferences" = {
         "app.normandy.api_url" = "";
         "app.normandy.enabled" = false;

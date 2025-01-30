@@ -2,7 +2,10 @@
   programs.firefox = {
     enable = true;
 
-    profiles.default = { # Hardened default profile
+    ############################
+    # Hardened default profile #
+    ############################
+    profiles.default = {
       id = 0;
       name = "default";
       isDefault = true;
@@ -37,7 +40,10 @@
       '';
     };
 
-    profiles.compatable = { # Semi-hardened "compatibility" profile
+    #########################################
+    # Semi-hardened "compatibility" profile #
+    #########################################
+    profiles.compatable = {
       id = 1;
       name = "compatible";
       isDefault = false;
@@ -69,10 +75,10 @@
       '';
     };
 
+    #################
+    # Policy Config #
+    #################
     policies = {
-      #################
-      # Policy Config #
-      #################
       "NetworkPrediction" = false;
       "CaptivePortal" = false;
       "DNSOverHTTPS" = {

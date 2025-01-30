@@ -19,7 +19,7 @@
     keepassxc
     vlc
     ghostty
-    (discord.override { withVencord = true; })
+    vesktop
   ];
 
   programs.firefox.enable = false;

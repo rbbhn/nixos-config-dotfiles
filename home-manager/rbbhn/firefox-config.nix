@@ -51,6 +51,13 @@
         "layout.css.prefers-color-scheme.content-override" = 1;
         "network.http.referer.spoofSource" = true;
         "browser.sessionstore.privacy_level" = 1;
+        "ExtensionSettings" = {
+          # "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+          "tasksforcanvas@jtchengdev.com" = { # Tasks for Canvas
+            "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/tasks-for-canvas/latest.xpi";
+            "installation_mode" = "force_installed";
+          };
+        };
       };
 
       search = {
@@ -95,14 +102,13 @@
         keepassxc-browser # Password manager
         privacy-badger # Tracker blocker
         temporary-containers # Temporary containers
-        umatrix # Advanced content blocking
-      ]; */
+        umatrix # Advanced content blocking */
 
       ##############
       # Extensions #
       ##############
       "ExtensionSettings" = {
-        "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+        # "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
         "uBlock0@raymondhill.net" = { # uBlock Origin
           "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           "installation_mode" = "force_installed";

@@ -4,7 +4,6 @@
     git
     wget
 
-    # Pull progs. out and make individual modules when programs gain home-manager configs
     # This is the big todo - these progs. should NOT be in this place.
     # TUI
     progress

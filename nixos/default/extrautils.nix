@@ -22,6 +22,4 @@
   ];
 
   programs.firefox.enable = false;
-
-  services.flatpak.enable = true;
 }

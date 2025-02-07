@@ -11,6 +11,7 @@
     ranger
     gh
     glow
+    appimage-run
 
     # GUI
     kdePackages.kate

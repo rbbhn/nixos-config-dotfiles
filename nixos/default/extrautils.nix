@@ -19,7 +19,6 @@
     vlc
     ghostty
     vesktop
-    everest-mons
   ];
 
   programs.firefox.enable = false;

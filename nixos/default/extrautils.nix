@@ -11,7 +11,6 @@
     ranger
     gh
     glow
-    appimage-run
 
     # GUI
     kdePackages.kate
@@ -23,4 +22,6 @@
   ];
 
   programs.firefox.enable = false;
+
+  services.flatpak.enable = true;
 }

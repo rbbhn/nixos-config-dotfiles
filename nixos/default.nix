@@ -1,6 +1,6 @@
 { hostname, username, ... }: {
   imports = [
-    ./common
+    ./default
     ./${hostname}.nix
     ./${username}.nix
   ];

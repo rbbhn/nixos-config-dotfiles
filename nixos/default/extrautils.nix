@@ -19,6 +19,8 @@
     vlc
     ghostty
     vesktop
+    audacity
+    obs
   ];
 
   programs.firefox.enable = false;

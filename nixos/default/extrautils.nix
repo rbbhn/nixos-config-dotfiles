@@ -20,7 +20,7 @@
     ghostty
     vesktop
     audacity
-    obs
+    obs-studio
   ];
 
   programs.firefox.enable = false;

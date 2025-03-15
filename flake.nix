@@ -46,9 +46,29 @@
 
 
       # Desktop===================================================
-      /*${desktop} = nixpkgs.lib.nixosSystem {
+      ${desktop} = nixpkgs.lib.nixosSystem {
 
-      };*/
+        system = "${system}";
+
+        modules = let hostname = "${desktop}"; in [
+          ./nixos # Import NixOS Modules
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "backup"; # Allow home-manager to override manual config files
+              users.${username} = import ./home-manager; # Import home-manager modules
+              extraSpecialArgs = {
+                inherit self inputs stateVersion username hostname system;
+              };
+            };
+          }
+        ];
+
+        specialArgs = let hostname = "${desktop}"; in {
+          inherit self inputs stateVersion username hostname system;
+        };
+      };
     };
   };
 }

@@ -1,3 +1,6 @@
 { ... }: {
-  # fill in later
+  imports = [
+    ./hardware-configuration.nix
+    ./luks.nix
+  ];
 }

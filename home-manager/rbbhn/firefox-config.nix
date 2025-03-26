@@ -117,6 +117,10 @@
           "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/ublacklist/latest.xpi";
           "installation_mode" = "force_installed";
         };
+        "{DDC359D1-844A-42a7-9AA1-88A850A938A8}" = { # DownloadThemAll
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/file/4370602/downthemall-4.13.1.xpi";
+          "installation_mode" = "force_installed";
+        };
       };
 
       ###############

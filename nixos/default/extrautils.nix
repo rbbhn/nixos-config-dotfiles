@@ -23,5 +23,10 @@
     obs-studio
   ];
 
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+  };
+
   programs.firefox.enable = false;
 }

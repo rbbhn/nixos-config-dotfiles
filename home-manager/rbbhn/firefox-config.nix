@@ -269,7 +269,7 @@
         "signon.generation.enabled" = false; # Disable generating password
         "signon.firefoxRelay.feature" = "disabled"; # Disable relay masks
         "signon.management.page.breach-alerts.enabled" = false; # Disable password breach notifications
-
+#
         "extensions.formautofill.addresses.enabled" = false; # Disable saving addresses
         "extensions.formautofill.creditCards.enabled" = false; # Disable saving payment info
 
